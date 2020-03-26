@@ -17,7 +17,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => {
+    return {
+      name: "",
+      email: "",
+      password: ""
+    };
+  },
+  methods: {
+    registerUser() {
+      if (this.password === true) {
+        const user = { name: this.name, email: this.email, password: this.password };
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
