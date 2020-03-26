@@ -16,6 +16,10 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {};
+</script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
+</style>

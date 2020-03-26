@@ -14,10 +14,12 @@
     <button @click="registerUser" class="btn">Sign me up</button>
 
   </div>
-  </template>
+</template>
 
 <script>
-    export default {};
+export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
+</style>
