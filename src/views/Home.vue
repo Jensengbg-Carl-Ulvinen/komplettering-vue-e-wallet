@@ -30,30 +30,31 @@
 
 <script>
   export default {
-  data() {
+  data: () => {
     return {
       form: {
-        name: null,
-        email: null,
-        password: null
-      }
+        name: '',
+        email: '',
+        password: ''
+      },
+      forms: ''
     };
   },
   methods: {
     onSubmit(name, email, password) {
-      if (name = '') {
-        sessionStorage.setItem('name', 'email', 'password', JSON.stringify({
-          name: name,
-          email: email,
-          password: password
-        }));
-       this.$router.push("/account");
-      }
-    },
-  },
-};
-
-
+      if (
+        this.name.length > 0 &&
+        this.email.includes("@") &&
+        this.password.length > 0
+      ){
+        this.forms = JSON.stringify(this.form);
+        this.$router.push("/account");
+    } else {
+      console.log('error');
+    }
+   }
+  }
+  }
 </script>
 
 <style lang="scss" scoped>

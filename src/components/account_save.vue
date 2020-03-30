@@ -18,11 +18,7 @@
 
 <script>
 import Registration from "@/views/Home.vue";
-
 //need to import data from json localstorage so that user can change his info.
-
-export default {
-  data: () => {}};
 </script>
 
 <style lang="scss" scoped>
