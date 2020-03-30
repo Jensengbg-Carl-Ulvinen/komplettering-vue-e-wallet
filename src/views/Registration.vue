@@ -39,6 +39,7 @@ export default {
 @import "../assets/scss/variables.scss";
 
 * {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: start;
