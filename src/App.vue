@@ -6,7 +6,7 @@
 
 <script>
 import Home from "../src/views/Home.vue";
-import Account from "../src/components/Account.vue";
+import Account from "../src/views/Account.vue";
 
 export default {
   name: 'App',

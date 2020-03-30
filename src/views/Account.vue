@@ -11,29 +11,23 @@
     <label for="password">Password</label>
     <p>{{ password }}</p>
     
-    <button type="button" v-on:click="changeUser()" class="btn">Ändra</button>
+    <button type="button" v-on:click="" class="btn">Ändra</button>
 
   </div>
 </template>
 
 <script>
-export default {
-    data: () => {
-            return {
-                register: {
-                    name: "",
-                    email: "",
-                    password: ""
-                }
-            }
-        },
-        methods: {
-            changeUser() {
-                this.$router.replace ({ name: "save_account" });
-            }
-        }
-    }
+import Registration from "@/views/Home.vue";
 
+export default {
+  data: () => {
+    return {
+      storedForms: localStorage.getItem("forms"),
+      forms: [],
+      index: ""
+    };
+  }
+}
 </script>
 
 <style lang="scss" scoped>
