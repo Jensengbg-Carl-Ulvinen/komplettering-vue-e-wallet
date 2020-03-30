@@ -22,34 +22,36 @@
 
   <div class="button">
 
-    <button type="button" v-on:click="createUser()" class="btn">Sign me up!</button>
+    <button type="button" v-on:click="onSubmit()" class="btn">Sign me up!</button>
 
   </div>
 </div>
-
-
 </template>
 
 <script>
-
   export default {
-
-    data() {
-      return {
-        form: {
-          name: "",
-          email: "",
-          password: ""
-        },
-        forms: []
-      };
-    },
-    methods: {
-      createUser() {
-          this.$router.push("/account");
+  data() {
+    return {
+      form: {
+        name: null,
+        email: null,
+        password: null
       }
-    }
-  }
+    };
+  },
+  methods: {
+    onSubmit(name, email, password) {
+      if (name = '') {
+        sessionStorage.setItem('name', 'email', 'password', JSON.stringify({
+          name: name,
+          email: email,
+          password: password
+        }));
+       this.$router.push("/account");
+      }
+    },
+  },
+};
 
 
 </script>

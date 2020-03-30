@@ -5,13 +5,13 @@
     <p>Ditt konto</p>
     
     <label for="name">Namn</label>
-    <p>{{ name }}</p>
+    <p>{{ form.name }}</p>
     <label for="email">Email</label>
-    <p>{{ email }}</p>
+    <p>{{ form.email }}</p>
     <label for="password">Password</label>
-    <p>{{ password }}</p>
+    <p>{{ form.password }}</p>
     
-    <button type="button" v-on:click="" class="btn">Ändra</button>
+    <button type="button" class="btn">Ändra</button>
 
   </div>
 </template>
@@ -19,15 +19,9 @@
 <script>
 import Registration from "@/views/Home.vue";
 
+//need to import data from json localstorage so that user can change his info.
 export default {
-  data: () => {
-    return {
-      storedForms: localStorage.getItem("forms"),
-      forms: [],
-      index: ""
-    };
-  }
-}
+  data: () => {}};
 </script>
 
 <style lang="scss" scoped>
