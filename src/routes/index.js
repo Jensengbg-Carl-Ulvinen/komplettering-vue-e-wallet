@@ -1,25 +1,27 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Registration from "../views/Registration.vue";
-import Account from "../views/Account.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from "../views/Home.vue"
+import Account from "../components/Account.vue"
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: "/",
-    name: "Registration",
-    component: Registration
-  },
-  {
-    path: "/account",
-    name: "Account",
-    component: Account
-  }
-];
-
-const router = new VueRouter({
-  routes
-});
-
-export default router;
+export default new VueRouter({
+    routes: [
+        {
+            path: '/',
+            redirect: {
+                name: "Home"
+            }
+        },
+        {
+            path: "/Home",
+            name: "Home",
+            component: Home
+        },
+        {
+            path: "/account",
+            name: "account",
+            component: Account
+        }
+    ]
+})

@@ -5,16 +5,17 @@
 </template>
 
 <script>
-import Registration from "../src/views/Registration";
-import Account from "../src/views/Account";
+import Home from "../src/views/Home.vue";
+import Account from "../src/components/Account.vue";
 
 export default {
   name: 'App',
   components: {
-    Registration,
+    Home,
     Account
   }
 }
+
 </script>
 
 <style>

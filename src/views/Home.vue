@@ -1,38 +1,51 @@
 <template>
-<div class="register">
+<div class="home">
     <div class="header">
     <h1 class="headline">Welcome onbord</h1></div>
     <p>Registrera dig för ett konto</p>
-    
+    <form @submit.prevent="registerUser">
+
     <label for="name">Namn</label>
-    <input v-model="name" type="text" id="name" />
+
+    <input v-model="form.name" type="text" id="name" />
+
     <label for="email">Email</label>
-    <input v-model="email" type="text" id="email" />
+
+    <input v-model="form.email" type="text" id="email" />
+    
     <label for="password">Password</label>
-    <input v-model="password" type="text" id="password" />
+    
+    <input v-model="form.password" type="text" id="password" />
+    
+    </form>
+    
     <div class="button">
-    <button @click="registerUser" class="btn">Sign me up</button>
+    
+    <button type="button" v-on:click="createUser()" class="btn">Sign me up!</button>
+    
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data: () => {
-    return {
-      name: "",
-      email: "",
-      password: ""
-    };
-  },
-  methods: {
-    registerUser() {
-      if (this.password === true) {
-        const user = { name: this.name, email: this.email, password: this.password };
+    export default {
+      data() {
+        return {
+          form: {
+            name: "",
+            email: "",
+            password: ""
+          }
+        };
+      },
+      methods: {
+        createUser() {
+          this.$router.replace({
+            name: "account"
+          });
+        },
       }
     }
-  }
-};
 </script>
 
 <style lang="scss" scoped>
@@ -43,10 +56,9 @@ export default {
   flex-direction: column;
   justify-content: center;
   text-align: start;
-  
 }
 
-.register {
+.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,15 +76,15 @@ export default {
     }
   }
 
-  .button{
+  .button {
     padding-top: 1rem;
   }
 
-  .btn{
+  .btn {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 1rem; 
+    padding: 1rem;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     background: $white;
     border: 1px solid $black;
