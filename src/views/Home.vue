@@ -46,20 +46,10 @@
     },
     methods: {
       createUser() {
-        if (this.form.isValid === true) {
-          if (localStorage.getItem("forms")) {
-            this.forms = JSON.parse(localStorage.getItem("forms"));
-            this.forms.push(this.form);
-            localStorage.setItem("forms", JSON.stringify(this.forms));
-          } else {
-            this.forms.push(this.form);
-            localStorage.setItem("forms", JSON.stringify(this.forms));
-          }
           this.$router.push("/account");
-        }
       }
     }
-  };
+  }
 
 
 </script>
