@@ -10,7 +10,7 @@
     <label for="email">Email</label>
     <input v-model="formEmail" type="text" ref="email" />
     <label for="password">Password</label>
-    <input v-model="formPassword" type="text" ref="password" />
+    <input v-model="formPassword" type="password" ref="password" />
   </form>
   <div class="button">
     <button type="button" v-on:click="onSubmit()" class="btn">Sign me up!</button>
@@ -20,7 +20,6 @@
 
 <script>
 export default {
-
   data: () => {
     return {
       formName: '',
@@ -71,19 +70,30 @@ export default {
     }
   }
 
-  .button {
-    padding-top: 1rem;
+  p {
+    display: flex;
+    text-align: center;
   }
 
-  .btn {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    background: $white;
-    border: 1px solid $black;
-    cursor: pointer;
+  label[for^=email]{
+    color: $red;
+  }
+
+  .button {
+    padding-top: 1rem;
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: $white;
+      border: 1px solid $black;
+      cursor: pointer;
+    }
   }
 }
 </style>

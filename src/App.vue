@@ -38,7 +38,7 @@ html {
   text-align: center;
   color: $black;
   margin-top: 60px;
-  width: 37.5rem;
+  width: 30rem;
   min-height: 66.7rem;
 }
 </style>
