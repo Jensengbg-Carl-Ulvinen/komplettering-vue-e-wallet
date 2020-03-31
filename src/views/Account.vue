@@ -5,11 +5,11 @@
     <p>Ditt konto</p>
     
     <label for="name">Namn</label>
-    <p>{{ formName }}</p>
+    <p>{{ formName.name }}</p>
     <label for="email">Email</label>
-    <p>{{ formEmail }}</p>
+    <p>{{ formEmail.email }}</p>
     <label for="password">Password</label>
-    <p>{{ formPassword }}</p>
+    <p>{{ formPassword.password }}</p>
     
     <button type="button" class="btn">Ändra</button>
 

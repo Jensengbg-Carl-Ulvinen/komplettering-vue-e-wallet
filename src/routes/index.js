@@ -20,8 +20,8 @@ export default new VueRouter({
         },
         {
             path: "/account",
-            name: "account",
-            component: Account
+            name: "Account",
+            component: () => import("../views/Account.vue")
         }
     ]
 })

@@ -1,10 +1,14 @@
 <template>
+<div class="items">
+    <p>{{  }}</p>
+
+</div>
     
 </template>
 
 <script>
 export default {
-    
+    name: 'formItem'
 }
 </script>
 
