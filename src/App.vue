@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <router-view />
+    <loginForm v-bind:loginForm="loginForm"/>
   </div>
 </template>
 
 <script>
-import Home from "../src/views/Home.vue";
-import Account from "../src/views/Account.vue";
+import Registration from "@/views/Registration.vue";
+import Account from "@/views/Account.vue";
+import loginForm from "@/components/loginForm.vue";
 
 export default {
   name: 'App',
   components: {
-    Home,
-    Account
+    Registration,
+    Account,
+    loginForm
   }
 }
 

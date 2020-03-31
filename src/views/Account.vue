@@ -5,11 +5,11 @@
     <p>Ditt konto</p>
     
     <label for="name">Namn</label>
-    <p>{{ form.name }}</p>
+    <p>{{ formName }}</p>
     <label for="email">Email</label>
-    <p>{{ form.email }}</p>
+    <p>{{ formEmail }}</p>
     <label for="password">Password</label>
-    <p>{{ form.password }}</p>
+    <p>{{ formPassword }}</p>
     
     <button type="button" class="btn">Ändra</button>
 
@@ -17,12 +17,22 @@
 </template>
 
 <script>
-import Registration from "@/views/Home.vue";
+import Registration from "@/views/Registration.vue";
+import loginForm from "@/components/loginForm.vue";
 
-//need to import data from json localstorage so that user can change his info.
+//need to fetch data from loginForm so that user can change his info.
 
 export default {
-  data: () => {}};
+  data: () => {
+
+  },
+  methods: {
+    loginFormValues () {
+      this.output = this.$refs.name.value
+      this.output = this.$refs.email.value
+      this.output = this.$refs.password.value
+    }
+  }};
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from "../views/Home.vue"
+import Registration from "../views/Registration.vue"
 import Account from "../views/Account.vue"
 
 Vue.use(VueRouter)
@@ -10,13 +10,13 @@ export default new VueRouter({
         {
             path: '/',
             redirect: {
-                name: "Home"
+                name: "Registration"
             }
         },
         {
-            path: "/Home",
-            name: "Home",
-            component: Home
+            path: "/Registration",
+            name: "Registration",
+            component: Registration
         },
         {
             path: "/account",
