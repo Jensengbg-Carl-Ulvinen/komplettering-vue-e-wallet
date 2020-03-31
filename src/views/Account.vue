@@ -18,8 +18,6 @@
 
 <script>
 import Registration from "@/views/Registration.vue";
-import loginForm from "@/components/loginForm.vue";
-import formItem from "@/components/formItem.vue";
 
 //need to fetch data from loginForm so that user can change his info.
 
