@@ -5,11 +5,11 @@
     <p>Ditt konto</p>
     
     <label for="name">Namn</label>
-    <p>{{ formName.name }}</p>
+    <p>{{ menu.name }}</p>
     <label for="email">Email</label>
-    <p>{{ formEmail.email }}</p>
+    <p>{{ menu.email }}</p>
     <label for="password">Password</label>
-    <p>{{ formPassword.password }}</p>
+    <p>{{ menu.password }}</p>
     
     <button type="button" class="btn">Ändra</button>
 
@@ -20,15 +20,10 @@
 import Registration from "@/views/Registration.vue";
 
 export default {
-  data: () => {
-
-  },
-
-  methods: {
-    loginFormValues () {
-      this.output = this.$refs.name.value
-      this.output = this.$refs.email.value
-      this.output = this.$refs.password.value
+  
+  computed: {
+    menu() {
+      return JSON.parse(localStorage.getItem("user"))
     }
   }
 };

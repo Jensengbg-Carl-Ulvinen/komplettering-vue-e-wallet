@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Registration from "../views/Registration.vue"
+import Account from "../views/Account.vue"
 
 Vue.use(VueRouter)
 
@@ -20,7 +21,7 @@ export default new VueRouter({
         {
             path: "/account",
             name: "Account",
-            component: () => import("../views/Account.vue")
+            component: Account
         }
     ]
 })

@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  
+
   data: () => {
     return {
       formName: '',
@@ -30,12 +30,15 @@ export default {
   },
 
   methods: {
-
     onSubmit() {
-      this.$router.push("/");
-      this.$router.replace("/account");
-      console.log('form submitted');
-    }
+      const user = {
+        name: this.formName,
+        email: this.formEmail,
+        password: this.formPassword
+      }
+      localStorage.setItem("user", JSON.stringify(user))
+      this.$router.push("/account");
+    } 
   }
 }
 </script>
