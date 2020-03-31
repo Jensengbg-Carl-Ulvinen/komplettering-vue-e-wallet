@@ -19,19 +19,20 @@
 <script>
 import Registration from "@/views/Registration.vue";
 
-//need to fetch data from loginForm so that user can change his info.
-
 export default {
   data: () => {
 
   },
+
   methods: {
     loginFormValues () {
       this.output = this.$refs.name.value
       this.output = this.$refs.email.value
       this.output = this.$refs.password.value
     }
-  }};
+  }
+};
+
 </script>
 
 <style lang="scss" scoped>

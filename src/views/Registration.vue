@@ -20,6 +20,7 @@
 
 <script>
 export default {
+  
   data: () => {
     return {
       formName: '',
@@ -27,13 +28,12 @@ export default {
       formPassword: ''
     }
   },
+
   methods: {
-    updateloginFormValue(value) {
-      this.loginFormValues = value;
-    },
+
     onSubmit() {
-      this.$router.push("/account");
-      //this.$router.replace("/account");
+      this.$router.push("/");
+      this.$router.replace("/account");
       console.log('form submitted');
     }
   }
