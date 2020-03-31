@@ -8,13 +8,15 @@
 import Registration from "@/views/Registration.vue";
 import Account from "@/views/Account.vue";
 import loginForm from "@/components/loginForm.vue";
+import formItem from "@/components/formItem.vue";
 
 export default {
   name: 'App',
   components: {
     Registration,
     Account,
-    loginForm
+    loginForm,
+    formItem
   }
 }
 
