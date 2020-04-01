@@ -25,9 +25,7 @@ export default {
 
 html {
   background: $white;
-  max-width: 100vw;
   height: auto;
-  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +33,9 @@ html {
 
 #app {
   font-family: 'Titillium Web', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $black;
-  margin-top: 60px;
-  width: 30rem;
-  min-height: 66.7rem;
+  width: 375px;
+  height: 798px;
 }
 </style>

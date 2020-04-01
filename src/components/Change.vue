@@ -65,6 +65,14 @@ export default {
     background: $grey;
 
     .headline {
+      font-size: 26px;
+      font-family: Titillium Web;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 80%;
+      display: flex;
+      align-items: center;
       text-align: center;
     }
   }
@@ -72,14 +80,40 @@ export default {
   p {
     display: flex;
     text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 80%;
   }
 
-  label[for^=email]{
+  label[for^="email"] {
     color: $red;
+    font-size: 10px;
+    padding-top: 1rem;
+  }
+
+  label[for^="name"] {
+    color: $black;
+    font-size: 10px;
+    padding-top: 1rem;
+  }
+
+  label[for^="password"] {
+    color: $black;
+    font-size: 10px;
+    padding-top: 1rem;
+  }
+
+  input {
+    font-weight: normal;
+    font-size: 18px;
   }
 
   .button {
-    padding-top: 1rem;
+    padding-top: 4rem;
 
     .btn {
       display: flex;
@@ -94,5 +128,12 @@ export default {
       cursor: pointer;
     }
   }
+}
+
+input::placeholder {
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
 }
 </style>

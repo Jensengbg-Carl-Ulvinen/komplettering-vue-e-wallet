@@ -78,6 +78,14 @@ export default {
     background: $grey;
 
     .headline {
+      font-size: 26px;
+      font-family: Titillium Web;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 80%;
+      display: flex;
+      align-items: center;
       text-align: center;
     }
   }
@@ -85,20 +93,45 @@ export default {
   p {
     display: flex;
     text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 80%;
   }
 
-  label {
-    color: rgb(53, 53, 53);
-    font-size: 14px;
+  label[for^="email"] {
+    color: $black;
     font-weight: 600;
+    font-size: 10px;
+    opacity: 70%;
+    padding-top: 1rem;
+  }
+
+  label[for^="name"] {
+    color: $black;
+    font-weight: 600;
+    font-size: 10px;
+    opacity: 70%;
+    padding-top: 1rem;
+  }
+
+  label[for^="password"] {
+    color: $black;
+    font-weight: 600;
+    font-size: 10px;
+    opacity: 70%;
+    padding-top: 1rem;
   }
 
   h2 {
-    font-size: 14px;
-    font-weight: 300;
+    font-weight: normal;
+    font-size: 18px;
   }
   .button {
-    margin-top: 1rem;
+    padding-top: 4rem;
 
     .btn {
       display: flex;
