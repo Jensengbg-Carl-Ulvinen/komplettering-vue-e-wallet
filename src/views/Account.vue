@@ -12,7 +12,7 @@
     <h2>{{ menu.password }}</h2>
     
     <div class="button">
-    <button type="button" class="btn">Ändra</button>
+    <button type="button" v-on:click="changeInfo" class="btn">Ändra</button>
     </div>
 
   </div>
@@ -20,7 +20,7 @@
 
 <script>
 import Registration from "@/views/Registration.vue";
-import changeAccountInfo from "@/components/changeAccountInfo.vue"
+import Change from "@/components/Change.vue"
 
 export default {
   computed: {
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     changeInfo() {
-      this.$router.replace("/");
+      this.$router.push("/change");
     }
   }
 };

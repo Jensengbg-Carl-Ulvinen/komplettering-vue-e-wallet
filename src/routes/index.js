@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Registration from "../views/Registration.vue"
 import Account from "../views/Account.vue"
+import Change from "../components/Change.vue"
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,12 @@ export default new VueRouter({
             path: "/account",
             name: "Account",
             component: Account
+        },
+        {
+            path: "/change",
+            name: "Change",
+            component: Change
         }
+        
     ]
 })

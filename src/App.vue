@@ -7,12 +7,14 @@
 <script>
 import Registration from "@/views/Registration.vue";
 import Account from "@/views/Account.vue";
+import Change from "@/components/Change.vue"
 
 export default {
   name: 'App',
   components: {
     Registration,
-    Account
+    Account,
+    Change
   }
 }
 
