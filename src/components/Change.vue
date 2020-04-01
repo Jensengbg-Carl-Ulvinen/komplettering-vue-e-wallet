@@ -1,16 +1,16 @@
 <template>
     <div class="home">
   <div class="header">
-    <h1 class="headline">Welcome onbord</h1>
+    <h1 class="headline">Välkommen!</h1>
   </div>
   <p>Ditt konto</p>
   <form @submit.prevent="loginFormValues">
     <label for="name">Namn</label>
-    <input v-model="formName" type="text" ref="name" />
+    <input v-model="formName" type="text" ref="name" :placeholder="[[ menu.name ]]"/>
     <label for="email">Email</label>
-    <input v-model="formEmail" type="text" ref="email" />
+    <input v-model="formEmail" type="text" ref="email" :placeholder="[[ menu.email ]]"/>
     <label for="password">Password</label>
-    <input v-model="formPassword" type="password" ref="password" />
+    <input v-model="formPassword" type="password" ref="password" :placeholder="[[ menu.password ]]" />
   </form>
   <div class="footer">
   <div class="button">
@@ -21,13 +21,12 @@
 </template>
 <script>
 export default {
-  data: () => {
-    return {
-      formName: '',
-      formEmail: '',
-      formPassword: ''
+  
+  computed: {
+    menu(){
+      return JSON.parse(localStorage.getItem("user"))
     }
-  },
+  }, 
 
   methods: {
     onSubmit() {
