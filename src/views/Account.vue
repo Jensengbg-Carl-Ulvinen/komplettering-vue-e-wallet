@@ -14,7 +14,7 @@
     <button type="button" v-on:click="changeInfo" class="btn">Ändra</button>
     </div>
      
-    <!--
+    <!-- Thought this was a good idea but decided to display the data in a new components placeholder instead.
     <template v-if="changeInfo()">
     <form @submit.prevent="loginFormValues">
     <label for="name">Namn</label>
@@ -23,12 +23,12 @@
     <input v-model="formEmail" type="text" ref="email" />
     <label for="password">Password</label>
     <input v-model="formPassword" type="password" ref="password" />
-  </form>
-  <div class="footer">
-  <div class="button">
+    </form>
+    <div class="footer">
+    <div class="button">
     <button type="button" v-on:click="onSubmit()" class="btn">Spara</button>
-  </div>
-  </div>
+    </div>
+    </div>
      </template>
      -->
 
